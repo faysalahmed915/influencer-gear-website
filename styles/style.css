@@ -1,0 +1,25 @@
+It looks like you are asking about enabling GitHub Copilot auto-suggestions in your code editor. Here are some steps to ensure that GitHub Copilot is properly set up:
+
+### Visual Studio Code (VS Code)
+1. **Install GitHub Copilot Extension**: Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`. Search for "GitHub Copilot" and install it.
+2. **Sign In**: After installing the extension, you need to sign in to GitHub. Click on the Copilot icon in the status bar and follow the prompts to sign in.
+3. **Enable Suggestions**: Ensure that suggestions are enabled. Go to `File > Preferences > Settings` and search for "Copilot". Make sure that `GitHub Copilot: Enable` is checked.
+
+### JetBrains IDEs (e.g., IntelliJ IDEA, PyCharm)
+1. **Install GitHub Copilot Plugin**: Go to `File > Settings > Plugins` and search for "GitHub Copilot". Install the plugin.
+2. **Sign In**: After installing the plugin, you need to sign in to GitHub. Follow the prompts to sign in.
+3. **Enable Suggestions**: Ensure that suggestions are enabled in the plugin settings.
+
+### Neovim
+1. **Install GitHub Copilot Plugin**: Use a plugin manager like `vim-plug` to install the Copilot plugin. Add the following to your `init.vim` or `init.lua`:
+    ```vim
+    Plug 'github/copilot.vim'
+    ```
+2. **Sign In**: After installing the plugin, you need to sign in to GitHub. Run `:Copilot setup` and follow the prompts to sign in.
+3. **Enable Suggestions**: Ensure that suggestions are enabled by adding the following to your configuration:
+    ```vim
+    let g:copilot_no_tab_map = v:true
+    imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+    ```
+
+If you are using a different editor, please let me know which one, and I can provide more specific instructions.
