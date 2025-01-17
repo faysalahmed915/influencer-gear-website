@@ -1,25 +1,130 @@
-It looks like you are asking about enabling GitHub Copilot auto-suggestions in your code editor. Here are some steps to ensure that GitHub Copilot is properly set up:
+/* imported font section */
 
-### Visual Studio Code (VS Code)
-1. **Install GitHub Copilot Extension**: Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`. Search for "GitHub Copilot" and install it.
-2. **Sign In**: After installing the extension, you need to sign in to GitHub. Click on the Copilot icon in the status bar and follow the prompts to sign in.
-3. **Enable Suggestions**: Ensure that suggestions are enabled. Go to `File > Preferences > Settings` and search for "Copilot". Make sure that `GitHub Copilot: Enable` is checked.
+/* poppins font */
 
-### JetBrains IDEs (e.g., IntelliJ IDEA, PyCharm)
-1. **Install GitHub Copilot Plugin**: Go to `File > Settings > Plugins` and search for "GitHub Copilot". Install the plugin.
-2. **Sign In**: After installing the plugin, you need to sign in to GitHub. Follow the prompts to sign in.
-3. **Enable Suggestions**: Ensure that suggestions are enabled in the plugin settings.
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-### Neovim
-1. **Install GitHub Copilot Plugin**: Use a plugin manager like `vim-plug` to install the Copilot plugin. Add the following to your `init.vim` or `init.lua`:
-    ```vim
-    Plug 'github/copilot.vim'
-    ```
-2. **Sign In**: After installing the plugin, you need to sign in to GitHub. Run `:Copilot setup` and follow the prompts to sign in.
-3. **Enable Suggestions**: Ensure that suggestions are enabled by adding the following to your configuration:
-    ```vim
-    let g:copilot_no_tab_map = v:true
-    imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-    ```
 
-If you are using a different editor, please let me know which one, and I can provide more specific instructions.
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+.inter-font {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Shared font stylising */
+
+
+
+
+/* header styles starts here */
+
+header {
+    margin: 87px 120px;
+    font-family: "Poppins", serif;
+
+
+
+}
+
+/* navigation style  */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    color: #3A3A3A;
+    margin-bottom: 20px;
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 34px;
+    padding: 8px 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: #3A3A3A;
+
+}
+/* camera position problem */
+.main-camera {
+    position: absolute;
+    right: 140px;  
+    /* bottom: 10px; */
+}
+
+/* banner section style  */
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    gap: 130px;
+}
+
+.banner-title {
+    font-size: 3.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.banner-description {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 16px 100px 16px 0;
+
+}
+
+.btn-primary {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px 24px;
+    color: white;
+    background-color: #E02C6D;
+    border: none;
+    border-radius: 2.5625rem;
+}
+
+.brand-logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px;
+    padding: 70px 45px;
+    flex-wrap: wrap;
+}
+
+
+@media screen and (max-width: 576px) {
+    .banner{
+        flex-direction: column-reverse;
+
+    }
+    .main-camera {
+        position: absolute;
+        right: -20px;  
+        bottom: 10px;
+    }
+}
