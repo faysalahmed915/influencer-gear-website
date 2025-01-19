@@ -24,7 +24,23 @@
 }
 
 
-/* Shared font stylising */
+
+/* Shared stylising */
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+}
+
+
+img{
+    max-width: 100%;
+    display: block;
+}
 
 
 
@@ -32,8 +48,9 @@
 /* header styles starts here */
 
 header {
-    margin: 87px 120px;
+    margin: 87px 7.5rem;
     font-family: "Poppins", serif;
+    justify-content: center;
 
 
 
@@ -69,25 +86,71 @@ header nav li a {
     color: #3A3A3A;
 
 }
-/* camera position problem */
-.main-camera {
-    position: absolute;
-    right: 140px;  
-    /* bottom: 10px; */
-}
 
-/* banner section style  */
+
+/* banner section styles */
+/* 
+.banner{
+    border: 10px solid blue;
+    display: grid;
+    grid-template-columns:  minmax(25rem, 2fr) minmax(30rem, 1fr);
+    gap: 3rem;
+    justify-content: space-between;
+} */
 
 .banner {
+    border: 10px solid blue;
     display: flex;
     justify-content: space-between;
-    gap: 130px;
+    gap: 8rem;
+    flex-wrap: wrap;
 }
+.banner-section{
+    align-self: center;
+    /* border: 10px solid #3A3A3A; */
+    max-width: 36.3rem ;
+    min-width: 22rem; 
+    
+}
+.banner-img{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* border: 1rem solid #E02C6D; */
+    max-width: 29rem ;
+    min-width: 16rem;
+}
+
+.circle-design{
+    grid-area: 1 / 1 / 1 / 1;
+    width: 100%;
+}
+
+.main-camera{
+    width: 100%;
+    grid-area: 1 / 1 / 1 / 1;
+    z-index: 1;
+}
+
+/* camera position problem */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .banner-title {
     font-size: 3.25rem;
     font-weight: 700;
     margin: 0;
+    /* background-color: bisque; */
 }
 
 .banner-description {
@@ -106,7 +169,10 @@ header nav li a {
     border: none;
     border-radius: 2.5625rem;
 }
-
+.brand-logo-container{
+    width: 100%;
+    justify-content: center;
+}
 .brand-logo {
     display: flex;
     justify-content: space-around;
@@ -116,6 +182,39 @@ header nav li a {
     flex-wrap: wrap;
 }
 
+
+
+
+/* main section style */
+
+main{
+    width: 90%;
+    margin-inline: auto;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem; 
+    margin-top: 1.5rem;
+    justify-items: center;
+    }
+.card-box{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 2rem;
+    text-align: left;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 6;
+}
+
+.rating-container{
+    display: flex;
+    gap: 2rem;
+}
+
+/* break-point styles */
 
 @media screen and (max-width: 576px) {
     .banner{
@@ -128,3 +227,5 @@ header nav li a {
         bottom: 10px;
     }
 }
+
+
