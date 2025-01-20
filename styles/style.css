@@ -102,49 +102,21 @@ header nav li a {
     border: 10px solid blue;
     display: flex;
     justify-content: space-between;
-    gap: 8rem;
+    gap: 6em;
     flex-wrap: wrap;
+    /* overflow-x: auto; */
 }
 .banner-section{
-    align-self: center;
+    /* align-self: center; */
+    /* justify-self: center; */
     /* border: 10px solid #3A3A3A; */
-    max-width: 36.3rem ;
+    /* max-width: 36.3rem ;
     min-width: 22rem; 
-    
-}
-.banner-img{
-    display: grid;
-    grid-template-columns: 1fr;
-    /* border: 1rem solid #E02C6D; */
-    max-width: 29rem ;
-    min-width: 16rem;
-}
-
-.circle-design{
-    grid-area: 1 / 1 / 1 / 1;
-    width: 100%;
-}
-
-.main-camera{
-    width: 100%;
-    grid-area: 1 / 1 / 1 / 1;
-    z-index: 1;
-}
-
-/* camera position problem */
-
-
-
-
-
-
-
-
-
-
-
-
-
+     */
+    width: 40vw;
+    /* overflow: auto; */
+    }
+/* title secrtion style */
 
 .banner-title {
     font-size: 3.25rem;
@@ -169,9 +141,37 @@ header nav li a {
     border: none;
     border-radius: 2.5625rem;
 }
-.brand-logo-container{
+
+
+/* camera position style */
+
+.banner-img{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* border: 1rem solid #E02C6D; */
+    width: 30vw;
+    /* justify-self: center; */
+}
+
+.circle-design{
+    grid-area: 1 / 1 / 1 / 1;
     width: 100%;
+}
+
+.main-camera{
+    width: 100%;
+    grid-area: 1 / 1 / 1 / 1;
+    z-index: 1;
+}
+
+
+
+
+
+.brand-logo-container{
     justify-content: center;
+    justify-items: center;
+    
 }
 .brand-logo {
     display: flex;
@@ -216,7 +216,7 @@ main{
 
 /* break-point styles */
 
-@media screen and (max-width: 576px) {
+/* @media screen and (max-width: 576px) {
     .banner{
         flex-direction: column-reverse;
 
@@ -226,6 +226,8 @@ main{
         right: -20px;  
         bottom: 10px;
     }
+} */
+
+.hide{
+    display: none;
 }
-
-
